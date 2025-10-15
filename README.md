@@ -89,6 +89,27 @@ ecourts_scraper/
 ├── README.md                # Documentation
 └── results/ (auto-created)  # Scraped results saved here
 ```
+## ✅ Key Features
+
+- **Command-line arguments support**:
+  - `--cnr` : Provide the CNR number directly via CLI.
+  - `--today` (optional) : Check only if the case is listed today.
+  
+- **Flexible input handling**:
+  - If a CNR is provided via CLI, it is used first.
+  - If no CLI input is given, the script prompts for manual input.
+
+- **Smart behavior with --today**:
+  - If `--today` is set and the case isn’t scheduled for today, the script exits early.
+
+- **Automation flow**:
+  - Chrome opens automatically.
+  - CNR is auto-filled.
+  - CAPTCHA must be solved manually.
+  - Scraping continues after pressing Enter.
+
+> 💡 This makes the script more versatile, allowing both **manual** and **automated use**.
+
 ## 🧾 Notes
 
 The site requires a CAPTCHA, so manual input is necessary.
