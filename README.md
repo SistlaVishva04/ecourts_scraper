@@ -1,46 +1,55 @@
-📘 eCourts Scraper (Internship Task)
-🧠 Overview
+## 🧠 Overview
+**eCourts Scraper** is a Python project that automates fetching case details from the official [eCourts India website](https://services.ecourts.gov.in/ecourtindia_v6/).  
 
-This Python project automates fetching case details from the official eCourts India website
-👉 https://services.ecourts.gov.in/ecourtindia_v6/
+It allows you to search by **CNR number**, scrape the case status page, and extract important details such as:
 
-It searches by CNR number, scrapes the case status page, and extracts important details like:
+- **Case Type**
+- **Filing Date**
+- **Registration Number**
+- **Next Hearing Date**
+- **Court Name**
+- **Petitioner and Respondent**
 
-Case Type
+The results are saved in **JSON format** for easy access and automation.
 
-Filing Date
+---
 
-Registration Date
+## ⚙️ Requirements
 
-Next Hearing Date
+1. **Python 3.8+**  
+2. **Google Chrome** browser  
 
-Court Name
+Create a virtual environment and install dependencies:
 
-Petitioner and Respondent
 
-It also saves the results in JSON format.
-
-⚙️ Requirements
-
-Install Python (version 3.8 or higher) and Google Chrome.
-
-Then, create a virtual environment and install dependencies:
-
+# Create virtual environment
+```bash
 python -m venv venv
+```
+# Activate virtual environment (Windows)
+```bash
 venv\Scripts\activate
+```
+# Activate virtual environment (Linux/Mac)
+```bash
+source venv/bin/activate
+```
+# Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
 🚀 How to Run
 
 Run the main script:
-
+```bash
 python ecourts_scraper.py
-
+```
 
 Enter your CNR number when asked, for example:
-
+```bash
 Enter CNR number (e.g., MHAU019999992015): TSHC050008262025
-
+```
 
 The program will:
 
@@ -55,7 +64,7 @@ Scrape the case details
 Save the results to a JSON file in the results/ folder
 
 Example Output:
-
+```bash
 {
   "CNR": "TSHC050008262025",
   "checked_on": "2025-10-15T18:58:23",
@@ -69,16 +78,18 @@ Example Output:
     "respondent": "THE STATE OF TELANGANA"
   }
 }
+```
 
-🧩 Folder Structure
+## 🧩 Folder Structure
+```bash
 ecourts_scraper/
 │
 ├── ecourts_scraper.py      # Main script
 ├── requirements.txt         # Dependencies
 ├── README.md                # Documentation
 └── results/ (auto-created)  # Scraped results saved here
-
-🧾 Notes
+```
+## 🧾 Notes
 
 The site requires a CAPTCHA, so manual input is necessary.
 
@@ -88,8 +99,8 @@ The script runs in visible Chrome mode (not headless) for ease of captcha entry.
 
 You can delete the results/ folder anytime; it will auto-generate again.
 
-🏁 Author
+## 🏁 Author
 
-Internship Project: eCourts Scraper
-Developed by: S V Vishnu Vamsi
-Date: October 2025
+- **Internship Project**: eCourts Scraper
+- **Developed by**: S V Vishnu Vamsi
+- **Date**: October 2025
